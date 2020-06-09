@@ -1,0 +1,21 @@
+.Form {
+    padding: 1em .5em 0;
+}
+
+.Submit {
+    padding: .5em 1em;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    background-color: #009933;
+    transition: background .2s;
+}
+
+.Submit:hover {
+    background-color: #00802b;
+}
+
+.Submit:active {
+    background-color: #006622;
+}
