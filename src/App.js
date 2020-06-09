@@ -8,9 +8,18 @@ function App() {
     console.log('form', values)
   }
 
+  const defaultValues = {
+    fio: 'Vasy Pupkin',
+    password: '',
+    confirmPassword: ''
+  }
+
   return <main className='App'>
-    <Title/>
-    <Form onSubmit={submit}/>
+    <Title />
+    <Form
+      onSubmit={submit}
+      initialValues={defaultValues}
+    />
   </main>
 }
 

@@ -5,7 +5,7 @@ import textInput from './textInput'
 import passwordInput from './passwordInput'
 
 function Form(props) {
-    const { handleSubmit } = props
+    const { handleSubmit, reset } = props
 
     return <form
         className='Form'
@@ -28,6 +28,13 @@ function Form(props) {
             type='submit'
         >
             Submit
+        </button>
+
+        <button
+            onClick={reset}
+            className='Reset'
+        >
+            Reset
         </button>
     </form>
 }

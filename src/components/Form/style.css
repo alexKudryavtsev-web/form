@@ -24,7 +24,8 @@
     letter-spacing: 1px;
 }
 
-.Text:focus {
+.Text:focus,
+.Password:focus {
     border-color: #40a9ff;
     border-right-width: 1px!important;
     outline: 0;
@@ -32,15 +33,31 @@
     box-shadow: 0 0 0 2px rgba(24,144,255,.2);
 }
 
-.Submit {
+.Submit,
+.Reset {
     padding: 1em;
     color: #fff;
     border: none;
     border-radius: 4px;
     text-transform: uppercase;
     outline: none;
-    background-color: #6699ff;
     transition: background .2s;
+}
+
+.Reset {
+    background-color: #ff4d4d;
+}
+
+.Reset:hover {
+    background-color: #ff6666;
+}
+
+.Reset:active {
+    background-color: #ff9999;
+}
+
+.Submit {
+    background-color: #6699ff;
 }
 
 .Submit:hover {
