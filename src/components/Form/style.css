@@ -1,21 +1,52 @@
 .Form {
     padding: 1em .5em 0;
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+}
+
+.Form > * {
+    margin: .5em 0;
+}
+
+.Text,
+.Password {
+    padding: .5em;
+    font-size: 1em;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid #d9d9d9;
+    transition: all .3s;
+    color: #333;
+}
+
+.Password {
+    letter-spacing: 1px;
+}
+
+.Text:focus {
+    border-color: #40a9ff;
+    border-right-width: 1px!important;
+    outline: 0;
+    -webkit-box-shadow: 0 0 0 2px rgba(24,144,255,.2);
+    box-shadow: 0 0 0 2px rgba(24,144,255,.2);
 }
 
 .Submit {
-    padding: .5em 1em;
+    padding: 1em;
     color: #fff;
     border: none;
     border-radius: 4px;
+    text-transform: uppercase;
     outline: none;
-    background-color: #009933;
+    background-color: #6699ff;
     transition: background .2s;
 }
 
 .Submit:hover {
-    background-color: #00802b;
+    background-color: #99bbff;
 }
 
 .Submit:active {
-    background-color: #006622;
+    background-color: #b3ccff;
 }
