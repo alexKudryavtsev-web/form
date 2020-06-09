@@ -24,6 +24,10 @@
     letter-spacing: 1px;
 }
 
+.Warning {
+    color: #ff6666;
+}
+
 .Text:focus,
 .Password:focus {
     border-color: #40a9ff;

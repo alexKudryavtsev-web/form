@@ -3,6 +3,7 @@ import './style.css'
 import { reduxForm, Field } from 'redux-form'
 import textInput from './textInput'
 import passwordInput from './passwordInput'
+import validate from './validate'
 
 function Form(props) {
     const { handleSubmit, reset } = props
@@ -20,7 +21,7 @@ function Form(props) {
             component={passwordInput}
         />
         <Field
-            name='confirm-password'
+            name='confirmPassword'
             component={passwordInput}
         />
         <button
@@ -40,5 +41,6 @@ function Form(props) {
 }
 
 export default reduxForm({
-    form: 'login'
+    form: 'login',
+    validate
 })(Form)
