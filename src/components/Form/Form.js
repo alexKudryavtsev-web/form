@@ -3,6 +3,7 @@ import './style.css'
 import { reduxForm, Field } from 'redux-form'
 import textInput from './textInput'
 import passwordInput from './passwordInput'
+import { required, matchPassword, range } from './validate'
 
 function Form(props) {
     const { handleSubmit, reset } = props
@@ -14,14 +15,17 @@ function Form(props) {
         <Field
             name='fio'
             component={textInput}
+            validate={[required, range()]}
         />
         <Field
             name='password'
             component={passwordInput}
+            validate={[required, range(2, 10)]}
         />
         <Field
             name='confirm-password'
             component={passwordInput}
+            validate={[matchPassword]}
         />
         <button
             className='Submit'
@@ -29,7 +33,6 @@ function Form(props) {
         >
             Submit
         </button>
-
         <button
             onClick={reset}
             className='Reset'
